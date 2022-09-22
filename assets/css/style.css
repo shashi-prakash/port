@@ -457,15 +457,35 @@ span {
     animation: up-down 2s ease-in-out infinite alternate-reverse both;
   }
   
+  
+  @media (max-width: 575px) {
+    #hero .hero-img img {
+      width: 80%;
+    }
+    #hero {
+      margin: 60px 0 -72px 0;
+    }
+    #hero h1 {
+      font-size: 24px !important;
+  }
+  #hero .btn-get-started {
+    font-size: 15px !important;
+    padding: 9px 19px !important;
+}
+#header #logo h1 {
+  font-size: 23px !important;
+}
+  }
+  
+  @media (max-height: 600px) {
+    #hero {
+      height: 100vh;
+    }
+  }
   @media (max-width: 991px) {
     #hero {
       height: calc(100vh - 72px);
     }
-  
-    /* #hero .animated {
-      -webkit-animation: none;
-      animation: none;
-    } */
   
     #hero .hero-img {
       text-align: center;
@@ -489,18 +509,6 @@ span {
   
     #hero .hero-img img {
       width: 70%;
-    }
-  }
-  
-  @media (max-width: 575px) {
-    #hero .hero-img img {
-      width: 80%;
-    }
-  }
-  
-  @media (max-height: 600px) {
-    #hero {
-      height: 100vh;
     }
   }
   
