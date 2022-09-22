@@ -627,6 +627,11 @@
       document.getElementById('page1').innerHTML = ` <embed  style="display: block;" src="assets/img/my-resume.pdf"
                     frameborder="0" width="900" height="520" >`
     }
+    $(document).ready(function () {
+            $(document).bind("contextmenu", function (e) {
+                return false;
+            });
+        });
   </script>  
 </body>
 
