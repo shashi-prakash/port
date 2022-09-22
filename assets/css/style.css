@@ -429,7 +429,6 @@ span {
     font-size: 44px;
     font-weight: 700;
     line-height: 56px;
-    /* color: #4e4039; */
   }
   
   
@@ -467,14 +466,17 @@ span {
     }
     #hero h1 {
       font-size: 24px !important;
-  }
-  #hero .btn-get-started {
-    font-size: 15px !important;
-    padding: 9px 19px !important;
-}
-#header #logo h1 {
-  font-size: 23px !important;
-}
+    }
+    #hero .btn-get-started {
+     font-size: 15px !important;
+     padding: 9px 19px !important;
+    }
+    #header #logo h1 {
+      font-size: 23px !important;
+    }
+    /* .hi-there{
+      font-size: 58px;
+    } */
   }
   
   @media (max-height: 600px) {
@@ -663,11 +665,84 @@ span {
     color: rgb(235, 93, 30);
     text-align: inherit;
   }
+  .hi-there{
+    margin: 0 0 34px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    font-family: "Philosopher", sans-serif;
+    color: rgb(235, 93, 30);
+    text-align: inherit;
+  }
   .wrapper {
     margin: auto;
     margin-top: 30px;
   }
-  
+  .portfolio-wrap {
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    z-index: 1;
+    margin-bottom: 30px;
+}
+ .portfolio-wrap::before {
+    content: "";
+    background: rgba(122, 105, 96, 0.6);
+    position: absolute;
+    left: 100%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+}
+ .portfolio-wrap img {
+    transition: 0.3s;
+    position: relative;
+    z-index: 1;
+    height: 240px;
+    cursor: pointer;
+}
+ .portfolio-wrap .portfolio-links {
+    opacity: 0;
+    left: 0;
+    right: 0;
+    bottom: calc(13% - 32px);
+    text-align: center;
+    z-index: 3;
+    position: absolute;
+    transition: all ease-in-out 0.3s;
+}
+ .portfolio-wrap .portfolio-links a {
+    position: relative;
+    color: #eb5d1e;
+    margin: 9px 4px;
+    line-height: 0;
+    background-color: #fff;
+    padding-top: 0px;
+    padding-right: 1px;
+    border-radius: 50px;
+    text-align: center;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    transition: 0.3s;
+}
+.portfolio-wrap:hover .portfolio-links {
+  background: #f8ada3e0;
+  opacity: 1;
+  padding: 0px;
+  cursor: pointer;
+}
+.bi-link::before {
+  content: "\f471";
+  top: 4px;
+  right: 19px;
+  margin-right: -17px;
+  font-size: 16px;
+  position: absolute;
+}
   .tab-wrapper {
     text-align: center;
     display: block;
@@ -801,6 +876,10 @@ span {
     .get-started{
       text-align: center !important;
       margin: 10px 0px 10px !important;
+    }
+    .hi-there{
+      font-size: 35px !important;
+      text-align: center !important;
     }
    
   }
@@ -1135,6 +1214,9 @@ span {
 }
 #header #logo h1 a {
   font-size: 22px !important;
+}
+#mobile-hide{
+  display: none;
 }
 }
 #newsletter .form-control:focus {
